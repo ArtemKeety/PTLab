@@ -1,0 +1,41 @@
+# История и служебные каталоги git
+**/.git
+.gitignore
+.github
+.travis.yml
+
+# IDE и локальные инструменты
+.idea
+.vscode
+.cursor
+
+# Окружение и кэши — зависимости ставятся внутри образа
+.venv
+venv
+env
+**/__pycache__
+**/*.py[cod]
+.pytest_cache
+.mypy_cache
+.ruff_cache
+.tox
+.nox
+.coverage
+.coverage.*
+htmlcov
+coverage.xml
+.hypothesis
+
+# Секреты и локальные данные
+.env
+.env.*
+!.env.example
+*.sqlite3
+*.log
+media
+staticfiles
+
+# Служебные файлы ОС
+.DS_Store
+Thumbs.db
+Desktop.ini

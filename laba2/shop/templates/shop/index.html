@@ -1,0 +1,37 @@
+{% extends "base.html" %}
+{% block title %}Товары{% endblock %}
+{% block content %}
+<div class="card">
+    <h3>Каталог</h3>
+
+    {% if discount %}
+        <p class="muted">Ваша персональная скидка: <b>{{ discount }}%</b></p>
+    {% endif %}
+
+    <table>
+        <thead>
+            <tr><th>Наименование</th><th>Цена</th><th></th></tr>
+        </thead>
+        <tbody>
+            {% for p in products %}
+            <tr class="product-row">
+                <td>{{ p.name }}</td>
+                <td class="price">
+                    {% if discount %}
+                        <s class="muted">{{ p.price_old }} ₽</s>
+                        <b>{{ p.price_final }} ₽</b>
+                    {% else %}
+                        {{ p.price }} ₽
+                    {% endif %}
+                </td>
+                <td style="text-align:right">
+                    <a href="{% url 'buy' p.id %}" class="btn">Купить</a>
+                </td>
+            </tr>
+            {% empty %}
+            <tr><td colspan="3" class="muted">Товаров пока нет</td></tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</div>
+{% endblock %}

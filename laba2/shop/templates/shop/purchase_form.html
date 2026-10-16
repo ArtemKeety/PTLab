@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+{% block title %}Покупка{% endblock %}
+{% block content %}
+<div class="card" style="max-width:500px;margin:0 auto">
+    <h2>Оформление покупки</h2>
+    <p class="muted">Покупатель: <b>{{ user.username }}</b></p>
+
+    <div id="purchase-block">
+        <form hx-post="{% url 'buy' view.kwargs.product_id %}"
+              hx-target="#purchase-block"
+              hx-swap="outerHTML">
+            {% csrf_token %}
+            <div class="form-row">
+                <label for="address">Адрес доставки</label>
+                <input type="text" name="address" id="address" required
+                       placeholder="г. Москва, ул. Ленина, д. 1">
+            </div>
+            <button type="submit" class="btn btn-block">Отправить</button>
+        </form>
+    </div>
+</div>
+{% endblock %}

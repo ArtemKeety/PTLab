@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<root>
+  <student name="Иванов Иван Иванович">
+    <subject name="математика">67</subject>
+    <subject name="литература">100</subject>
+    <subject name="программирование">91</subject>
+    <subject name="химия">75</subject>
+    <subject name="социология">68</subject>
+    <subject name="физика">72</subject>
+    <subject name="информатика">85</subject>
+    <subject name="биология">79</subject>
+    <subject name="английский">88</subject>
+    <subject name="история">74</subject>
+    <subject name="география">81</subject>
+  </student>
+
+  <student name="Петров Петр Петрович">
+    <subject name="математика">78</subject>
+    <subject name="литература">82</subject>
+    <subject name="программирование">76</subject>
+    <subject name="химия">87</subject>
+    <subject name="социология">61</subject>
+    <subject name="физика">80</subject>
+    <subject name="информатика">73</subject>
+    <subject name="биология">69</subject>
+    <subject name="английский">84</subject>
+    <subject name="история">77</subject>
+    <subject name="география">71</subject>
+  </student>
+
+  <student name="Сидорова Анна Сергеевна">
+    <subject name="математика">92</subject>
+    <subject name="литература">88</subject>
+    <subject name="программирование">95</subject>
+    <subject name="химия">84</subject>
+    <subject name="социология">79</subject>
+    <subject name="физика">81</subject>
+    <subject name="информатика">90</subject>
+    <subject name="биология">86</subject>
+    <subject name="английский">93</subject>
+    <subject name="история">89</subject>
+    <subject name="география">82</subject>
+  </student>
+
+  <student name="Кузнецов Дмитрий Алексеевич">
+    <subject name="математика">81</subject>
+    <subject name="литература">70</subject>
+    <subject name="программирование">90</subject>
+    <subject name="химия">73</subject>
+    <subject name="социология">65</subject>
+    <subject name="физика">74</subject>
+    <subject name="информатика">88</subject>
+    <subject name="биология">67</subject>
+    <subject name="английский">76</subject>
+    <subject name="история">72</subject>
+    <subject name="география">69</subject>
+  </student>
+
+  <student name="Смирнова Елена Владимировна">
+    <subject name="математика">85</subject>
+    <subject name="литература">91</subject>
+    <subject name="программирование">78</subject>
+    <subject name="химия">89</subject>
+    <subject name="социология">76</subject>
+    <subject name="физика">80</subject>
+    <subject name="информатика">82</subject>
+    <subject name="биология">93</subject>
+    <subject name="английский">87</subject>
+    <subject name="история">84</subject>
+    <subject name="география">79</subject>
+  </student>
+
+  <student name="Попов Артем Игоревич">
+    <subject name="математика">85</subject>
+    <subject name="литература">74</subject>
+    <subject name="программирование">98</subject>
+    <subject name="химия">71</subject>
+    <subject name="социология">68</subject>
+    <subject name="физика">77</subject>
+    <subject name="информатика">96</subject>
+    <subject name="биология">70</subject>
+    <subject name="английский">79</subject>
+    <subject name="история">75</subject>
+    <subject name="география">73</subject>
+  </student>
+
+  <student name="Васильева Ольга Дмитриевна">
+    <subject name="математика">80</subject>
+    <subject name="литература">96</subject>
+    <subject name="программирование">83</subject>
+    <subject name="химия">78</subject>
+    <subject name="социология">88</subject>
+    <subject name="физика">75</subject>
+    <subject name="информатика">81</subject>
+    <subject name="биология">85</subject>
+    <subject name="английский">90</subject>
+    <subject name="история">84</subject>
+    <subject name="география">86</subject>
+  </student>
+
+  <student name="Новиков Максим Андреевич">
+    <subject name="математика">73</subject>
+    <subject name="литература">69</subject>
+    <subject name="программирование">82</subject>
+    <subject name="химия">66</subject>
+    <subject name="социология">64</subject>
+    <subject name="физика">69</subject>
+    <subject name="информатика">80</subject>
+    <subject name="биология">71</subject>
+    <subject name="английский">75</subject>
+    <subject name="история">68</subject>
+    <subject name="география">72</subject>
+  </student>
+
+  <student name="Федорова Мария Павловна">
+    <subject name="математика">88</subject>
+    <subject name="литература">90</subject>
+    <subject name="программирование">84</subject>
+    <subject name="химия">91</subject>
+    <subject name="социология">79</subject>
+    <subject name="физика">82</subject>
+    <subject name="информатика">86</subject>
+    <subject name="биология">87</subject>
+    <subject name="английский">92</subject>
+    <subject name="история">83</subject>
+    <subject name="география">80</subject>
+  </student>
+
+  <student name="Морозов Никита Викторович">
+    <subject name="математика">76</subject>
+    <subject name="литература">72</subject>
+    <subject name="программирование">79</subject>
+    <subject name="химия">70</subject>
+    <subject name="социология">71</subject>
+    <subject name="физика">74</subject>
+    <subject name="информатика">77</subject>
+    <subject name="биология">68</subject>
+    <subject name="английский">73</subject>
+    <subject name="история">77</subject>
+    <subject name="география">83</subject>
+  </student>
+
+  <student name="Волкова Дарья Романовна">
+    <subject name="математика">94</subject>
+    <subject name="литература">89</subject>
+    <subject name="программирование">99</subject>
+    <subject name="химия">86</subject>
+    <subject name="социология">82</subject>
+    <subject name="физика">88</subject>
+    <subject name="информатика">97</subject>
+    <subject name="биология">90</subject>
+    <subject name="английский">95</subject>
+    <subject name="история">87</subject>
+    <subject name="география">84</subject>
+  </student>
+
+  <student name="Соколов Илья Кириллович">
+    <subject name="математика">75</subject>
+    <subject name="литература">78</subject>
+    <subject name="программирование">81</subject>
+    <subject name="химия">80</subject>
+    <subject name="социология">69</subject>
+    <subject name="физика">86</subject>
+    <subject name="информатика">79</subject>
+    <subject name="биология">74</subject>
+    <subject name="английский">77</subject>
+    <subject name="история">73</subject>
+    <subject name="география">76</subject>
+  </student>
+</root>

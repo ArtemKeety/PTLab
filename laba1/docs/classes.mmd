@@ -1,0 +1,39 @@
+classDiagram
+    class IDataReader {
+        <<protocol>>
+        +read(path: str) DataType
+    }
+    class TextDataReader {
+        +key: str
+        +students: DataType
+        +__init__()
+        +read(path: str) DataType
+    }
+    class XmlDataReader {
+        +students: DataType
+        -_student_field: str
+        -_subject_field: str
+        +__init__()
+        +read(path: str) DataType
+    }
+    class CalcRating {
+        +data: DataType
+        +rating: RatingType
+        +__init__(data: DataType)
+        +calc() RatingType
+    }
+    class StudentFiltering {
+        +func: RatingFilter
+        +__init__(func: RatingFilter)
+        +filter(r: RatingType) RatingType
+    }
+    class Application {
+        <<module>>
+        +get_path_from_arguments(args) str
+        +main()
+    }
+    IDataReader <|.. TextDataReader
+    IDataReader <|.. XmlDataReader
+    Application ..> XmlDataReader: creates
+    Application ..> CalcRating: calculates averages
+    Application ..> StudentFiltering: filters rating

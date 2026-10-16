@@ -1,0 +1,55 @@
+{% extends "base.html" %}
+{% block title %}Профиль{% endblock %}
+{% block content %}
+
+<div class="card">
+    <h2>Профиль</h2>
+    <p class="muted">Email: <b>{{ user.email|default:"—" }}</b></p>
+    <p class="muted">Телефон: <b>{{ user.phone|default:"—" }}</b></p>
+    <p>Куплено товаров: <span class="price">{{ user.purchased_count }}</span></p>
+
+    {% if user.discount_percent %}
+        <p>Ваша персональная скидка: <b>{{ user.discount_percent }}%</b></p>
+    {% endif %}
+</div>
+
+<div class="card mt-2">
+    <h3>Мои покупки</h3>
+
+    {% if purchases %}
+    <table>
+        <thead>
+            <tr>
+                <th>Товар</th>
+                <th>Дата</th>
+                <th>Цена</th>
+                <th>Скидка</th>
+                <th>Адрес</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for purchase in purchases %}
+            <tr>
+                <td>{{ purchase.product.name }}</td>
+                <td class="muted">{{ purchase.date|date:"d.m.Y H:i" }}</td>
+                <td class="price"><b>{{ purchase.price }} ₽</b></td>
+                <td>
+                    {% if purchase.discount_percent %}
+                        <span class="badge">{{ purchase.discount_percent }}%</span>
+                    {% else %}
+                        <span class="muted">—</span>
+                    {% endif %}
+                </td>
+                <td class="muted">{{ purchase.address }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    {% else %}
+        <p class="muted">Покупок пока нет</p>
+    {% endif %}
+
+    <a href="{% url 'index' %}" class="btn mt-2">← В каталог</a>
+</div>
+
+{% endblock %}

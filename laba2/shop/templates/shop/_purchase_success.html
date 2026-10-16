@@ -1,0 +1,10 @@
+<div class="card">
+    <h3>Покупка оформлена ✅</h3>
+    <p>Товар: <b>{{ product.name }}</b></p>
+    <p>Адрес: {{ address }}</p>
+    <p>
+        Итого:
+        <b>{{ price }} ₽</b>
+        {% if discount %}<span class="muted">(скидка {{ discount }}%)</span>{% endif %}
+    </p>
+</div>

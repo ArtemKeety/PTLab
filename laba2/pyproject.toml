@@ -1,0 +1,18 @@
+[project]
+name = "laba2"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.14"
+dependencies = [
+    "dj-database-url>=3.1.2",
+    "django>=6.1.1",
+    "django-heroku>=0.3.1",
+    "dotenv>=0.9.9",
+    "gunicorn>=26.2.0",
+    "psycopg2>=2.9.13",
+    "pytz>=2026.5",
+    "pyyaml>=6.0.3",
+    "sqlparse>=0.6.0",
+    "whitenoise>=6.12.0",
+]
