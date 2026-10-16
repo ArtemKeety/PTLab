@@ -29,3 +29,57 @@ jobs:
 
       - name: Run tests
         run: uv run --no-sync pytest test/
+
+  test-laba2:
+    name: Test Laba 2
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+
+    defaults:
+      run:
+        working-directory: ./laba2
+
+    services:
+      postgres:
+        image: postgres:16
+        env:
+          POSTGRES_DB: ptlab2_ci
+          POSTGRES_USER: postgres
+          POSTGRES_PASSWORD: ci_password
+        ports:
+          - 5432:5432
+        options: >-
+          --health-cmd "pg_isready -U postgres -d ptlab2_ci"
+          --health-interval 10s
+          --health-timeout 5s
+          --health-retries 5
+
+    env:
+      DJANGO_KEY: django-ci-only-secret-key
+      DEBUG: "False"
+      ROOT_URLCONF: tplab2.urls
+      NAME_DB: ptlab2_ci
+      USER_DB: postgres
+      PASSWORD_DB: ci_password
+      HOST_DB: 127.0.0.1
+      PORT_DB: "5432"
+      DB_SSL: "False"
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Install uv
+        uses: astral-sh/setup-uv@v6
+
+      - name: Install Python
+        run: uv python install 3.14
+
+      - name: Install PostgreSQL build dependencies
+        run: sudo apt-get update && sudo apt-get install -y libpq-dev build-essential
+
+      - name: Install dependencies
+        run: uv sync --locked
+
+      - name: Run tests
+        run: uv run --no-sync python manage.py test --noinput
